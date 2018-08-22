@@ -1,5 +1,1 @@
-import { NativeModules } from 'react-native';
-
-const { RNFamokoSdk } = NativeModules;
-
-export default RNFamokoSdk;
+export { default as Famoko } from './Famoko';
