@@ -1,4 +1,5 @@
 import FamokoSdk from './NativeBridges';
+import { NativeEventEmitter } from 'react-native';
 
 class Famoko {
   constructor() {
@@ -8,6 +9,10 @@ class Famoko {
   async sayHello() {
     const saying = await FamokoSdk.sayHello();
     console.log(saying);
+  }
+
+  getDeviceId() {
+    return FamokoSdk.getDeviceId();
   }
 }
 

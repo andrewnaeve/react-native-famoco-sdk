@@ -22,7 +22,18 @@ public class RNFamokoSdkModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void sayHello(Promise promise) {
-      promise.resolve("Hello");
+    promise.resolve("Hello");
   }
-  
+
+  @ReactMethod
+  public void getDeviceId(Promise promise) {
+    try {
+      String deviceId = Settings.Secure.getString(this.getReactApplicationContext().getContentResolver(),
+          Settings.Secure.ANDROID_ID);
+      promise.resolve(deviceId);
+    } catch (Exception err) {
+      promise.reject(err);
+    }
+  }
+
 }

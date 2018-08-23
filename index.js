@@ -1,1 +1,2 @@
-export { default as Famoko } from './Famoko';
+const Famoko = require('./Famoko');
+module.exports = Famoko;
