@@ -5,6 +5,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 public class RNFamokoSdkModule extends ReactContextBaseJavaModule {
 
@@ -19,4 +20,10 @@ public class RNFamokoSdkModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNFamokoSdk";
   }
+
+  @ReactMethod
+  public void sayHello(Promise promise) {
+      promise.resolve('Hello')
+  }
+  
 }
