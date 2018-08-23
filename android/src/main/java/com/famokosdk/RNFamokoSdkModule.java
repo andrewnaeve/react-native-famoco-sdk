@@ -19,13 +19,10 @@ public class RNFamokoSdkModule extends ReactContextBaseJavaModule {
   public String getName() {
     return "RNFamokoSdk";
   }
-<<<<<<< HEAD
 
   @ReactMethod
   public void sayHello(Promise promise) {
       promise.resolve('Hello')
   }
   
-=======
->>>>>>> fd5c9843f10bfc8eecdc00342eb9c93f994f8045
 }
