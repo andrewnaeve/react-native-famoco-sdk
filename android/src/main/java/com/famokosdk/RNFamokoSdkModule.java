@@ -22,7 +22,7 @@ public class RNFamokoSdkModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void sayHello(Promise promise) {
-      promise.resolve('Hello')
+      promise.resolve("Hello");
   }
   
 }
